@@ -5,9 +5,9 @@
     </ion-title>
   </ion-toolbar>
   <ion-segment scrollable mode="md" color="primary"  (ionChange)="cambiarCategoria( $event )">
-    <ion-segment-button mode="md"  *ngFor="let categoria of categorias" [value]="categoria">
+    <ion-segment-button mode="md"  *ngFor="let categoria of categorias_json" [value]="categoria.id">
       <ion-label text-capitalize>
-        {{categoria}}
+        {{categoria.name}}
       </ion-label>
     </ion-segment-button>
   </ion-segment>

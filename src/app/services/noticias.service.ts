@@ -25,7 +25,7 @@ export class NoticiasService {
 
   getTopHeadlines() {
     this.headlinesPage++;
-    return this.ejecutarQuery<RespuestaTopHeadlines>(`/top-headlines?country=us&page=${this.headlinesPage}`);
+    return this.ejecutarQuery<RespuestaTopHeadlines>(`/top-headlines?country=mx&page=${this.headlinesPage}`);
   }
 
   getTopHeadlinesCategorias(categoria: string) {
@@ -36,6 +36,6 @@ export class NoticiasService {
       this.categoriaActual = categoria;
     }
 
-    return this.ejecutarQuery<RespuestaTopHeadlines>(`/top-headlines?country=us&category=${categoria}&page=${this.categoriaPage}`)
+    return this.ejecutarQuery<RespuestaTopHeadlines>(`/top-headlines?country=mx&category=${categoria}&page=${this.categoriaPage}`)
   }
 }

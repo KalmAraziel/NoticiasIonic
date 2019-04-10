@@ -21,6 +21,36 @@ export class Tab2Page implements OnInit{
     'sports', 
     'technology'
   ];
+  categorias_json = [
+  {
+    id :'business',
+    name: 'Negocios'
+  },
+  {
+    id :'entertainment',
+    name: 'Entretención'
+  },
+  {
+    id :'general',
+    name: 'General'
+  },
+  {
+    id :'health',
+    name: 'Salud'
+  },
+  {
+    id :'science',
+    name: 'Ciencia'
+  },
+  {
+    id :'sports',
+    name: 'Deportes'
+  },
+  {
+    id :'technology',
+    name: 'Tecnología'
+  }];
+  
   noticias: Article[] = [];
   constructor(private noticiasServ: NoticiasService) {
     
@@ -32,6 +62,7 @@ export class Tab2Page implements OnInit{
   }
 
   cambiarCategoria(event) {
+    console.log(event.detail.value);
     this.noticias = [];
     this.cargarNoticiasPorCategorias(event.detail.value);
   }
